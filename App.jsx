@@ -1,11 +1,12 @@
-import { View, Text } from 'react-native'
+import { View, Text, SafeAreaView } from 'react-native'
 import React from 'react'
+import RootNavigator from './src/routes/RootNavigator'
 
 const App = () => {
   return (
-    <View>
-      <Text>App</Text>
-    </View>
+    <SafeAreaView>
+      <RootNavigator />
+    </SafeAreaView>
   )
 }
 
