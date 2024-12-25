@@ -1,13 +1,22 @@
-import { View, Text, SafeAreaView } from 'react-native'
-import React from 'react'
-import RootNavigator from './src/routes/RootNavigator'
+import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import RootNavigator from './src/routes/RootNavigator';
+import { NavigationContainer } from '@react-navigation/native';
 
 const App = () => {
   return (
-    <SafeAreaView>
-      <RootNavigator />
+    <SafeAreaView style={styles.flex}>
+      <NavigationContainer>
+        <RootNavigator />
+      </NavigationContainer>
     </SafeAreaView>
-  )
-}
+  );
+};
 
-export default App
+export default App;
+const styles = StyleSheet.create({
+  flex: {
+    flex: 1,
+  },
+});
