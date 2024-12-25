@@ -8,4 +8,6 @@ export const routes = {
     SIGN_UP: "SignUp",
     AUTH_FLOW: "AuthFlow",
     MAIN_FLOW: "MainFlow",
+    FEED_POSTS_SCREEN: "FeedPostsScreen",
+    PROFILE_SCREEN: 'ProfileScreen'
 }

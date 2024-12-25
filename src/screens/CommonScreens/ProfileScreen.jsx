@@ -1,9 +1,11 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import Header from '../../components/commons/Header'
+
 
 const ProfileScreen = () => {
     return (
         <View>
+            <Header screenName={'ProfileScreen'} isMyProfile={true} />
             <Text>ProfileScreen</Text>
         </View>
     )
