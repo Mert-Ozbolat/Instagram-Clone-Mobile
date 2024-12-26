@@ -1,7 +1,8 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, Image } from 'react-native'
 import Header from '../../components/commons/Header'
 import Avatar from '../../components/Avatar/Avatar'
 import ProfileData from '../../components/ProfileFlow/ProfileData'
+
 
 
 
@@ -24,11 +25,32 @@ const ProfileScreen = () => {
             </View>
 
             <View style={styles.userNameAndInfo}>
-                <Text style={styles.userName}>Username</Text>
-                <Text style={styles.category}>Category/Genre text</Text>
+                <View>
+                    <Text style={styles.userName}>Username</Text>
+                    <Text style={styles.category}>Category/Genre text</Text>
 
-                <Text style={styles.describtion}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem, quae.</Text>
-                <Text style={styles.link}>Link goes here</Text>
+                    <Text style={styles.describtion}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem, quae.</Text>
+                    <Text style={styles.link}>Link goes here</Text>
+                </View>
+
+                <View style={styles.followers}>
+                    <View style={styles.friends}>
+                        <Image source={{ uri: source }} style={styles.friendsImage} />
+                        <Image source={{ uri: source }} style={{ width: 26, height: 26, borderRadius: 9999, borderWidth: 1.5, borderColor: '#fff', position: 'absolute', left: 13, zIndex: -1 }} />
+                        <Image source={{ uri: source }} style={{ width: 26, height: 26, borderRadius: 9999, borderWidth: 1.5, borderColor: '#fff', position: 'absolute', left: 26, zIndex: -2 }} />
+                    </View>
+
+                    <View style={styles.followersRight}>
+                        <Text style={styles.followed}>Follow by </Text>
+                        <Text style={styles.boldFollowed}> username</Text>
+                        <Text style={styles.boldFollowed}> username</Text>
+                        <Text style={styles.followed}> and</Text>
+                        <Text style={styles.boldFollowed}> 100 others</Text>
+                    </View>
+
+                </View>
+
+
             </View>
 
         </View>
@@ -53,7 +75,8 @@ const styles = StyleSheet.create({
     userNameAndInfo: {
         padding: 6,
         paddingHorizontal: 12,
-        paddingBottom: 10
+        paddingBottom: 10,
+        gap: 12
     },
     userName: {
         color: '#000',
@@ -77,4 +100,36 @@ const styles = StyleSheet.create({
         fontSize: 13,
         lineHeight: 16
     },
+
+    friends: {
+        flexDirection: 'row',
+        width: 54
+    },
+    friendsImage: {
+        width: 26,
+        height: 26,
+        borderRadius: 9999,
+        borderWidth: 1.5,
+        borderColor: '#fff',
+    },
+    followers: {
+        flexDirection: 'row',
+        paddingBottom: 4
+    },
+    followed: {
+        fontSize: 13,
+        fontWeight: '400',
+        lineHeight: 16,
+        color: '#000'
+    },
+    boldFollowed: {
+        color: '#000',
+        fontSize: 13,
+        fontWeight: '700',
+        lineHeight: 16
+    },
+    followersRight: {
+        flexDirection: 'row'
+    }
+
 })
