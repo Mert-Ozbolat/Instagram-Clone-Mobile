@@ -2,6 +2,9 @@ import { StyleSheet, Text, View, Image } from 'react-native'
 import Header from '../../components/commons/Header'
 import Avatar from '../../components/Avatar/Avatar'
 import ProfileData from '../../components/ProfileFlow/ProfileData'
+import CustomButton from '../../components/CustomButtons/CustomButton'
+import PressableIcon from '../../components/ProfileFlow/PressableIcon'
+
 
 
 
@@ -47,12 +50,18 @@ const ProfileScreen = () => {
                         <Text style={styles.followed}> and</Text>
                         <Text style={styles.boldFollowed}> 100 others</Text>
                     </View>
-
                 </View>
 
-
+                <View tyle={styles.buttons}>
+                    <CustomButton title={"Follow"} theme={'primary'} />
+                    <View style={{ flexDirection: 'row', justifyContent: 'space-between', gap: 6 }}>
+                        <CustomButton title={"Message"} theme={'outline'} />
+                        <CustomButton title={"Subscribe"} theme={'outline'} />
+                        <CustomButton title={"Contact"} theme={'outline'} />
+                        <PressableIcon />
+                    </View>
+                </View>
             </View>
-
         </View>
     )
 }
@@ -130,6 +139,9 @@ const styles = StyleSheet.create({
     },
     followersRight: {
         flexDirection: 'row'
+    },
+    buttons: {
+        gap: 9
     }
 
 })
