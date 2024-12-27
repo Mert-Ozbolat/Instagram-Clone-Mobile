@@ -4,7 +4,7 @@ import React from 'react'
 const ProfileScreem = () => {
     return (
         <View>
-            <Text>ProfileScreem</Text>
+            <Text style={{ color: 'black' }}>ProfileScreem</Text>
         </View>
     )
 }

@@ -1,15 +1,18 @@
 import { StyleSheet, Text, View, Image } from 'react-native'
 import React from 'react'
 import { StoryRing } from './StoryRing'
+import { StoryRing2 } from '../../assets/icons'
 
 
-const Avatar = ({ image }) => {
+const Avatar = ({ image, isSaved }) => {
 
 
     return (
         <View style={styles.avatar}>
-            <StoryRing />
-            <Image style={styles.image} source={{ uri: image }} />
+
+            {isSaved ? <StoryRing2 /> : <StoryRing />}
+
+            <Image style={[styles.image, isSaved && styles.isSavedSize]} source={{ uri: image }} />
         </View>
     )
 }
@@ -27,4 +30,8 @@ const styles = StyleSheet.create({
         borderRadius: 999,
         position: 'absolute'
     },
+    isSavedSize: {
+        width: 55,
+        height: 55
+    }
 })

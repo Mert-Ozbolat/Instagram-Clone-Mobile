@@ -1,6 +1,6 @@
 import * as React from "react";
 import Svg, { Path } from "react-native-svg";
-export const Frame = (props) => (
+export const Frame6 = (props) => (
     <Svg
         width={14}
         height={14}

@@ -4,14 +4,25 @@ import Avatar from '../../components/Avatar/Avatar'
 import ProfileData from '../../components/ProfileFlow/ProfileData'
 import CustomButton from '../../components/CustomButtons/CustomButton'
 import PressableIcon from '../../components/ProfileFlow/PressableIcon'
+import SavedIGStore from '../../components/ProfileFlow/SavedIGStore'
+import TabNaviBar from '../../components/ProfileFlow/TabNaviBar'
+import { useState } from 'react'
+
+export const source = "https://i.pinimg.com/1200x/f2/de/46/f2de4688f716ea3696bbec29441b1751.jpg"
 
 
 
+const tabList = [
+    "post",
+    "reels",
+    "user",
+]
 
 
-const source = "https://i.pinimg.com/1200x/f2/de/46/f2de4688f716ea3696bbec29441b1751.jpg"
 
 const ProfileScreen = () => {
+
+    const [activeTab, setActiveTab] = useState(0)
 
     return (
         <View>
@@ -62,6 +73,8 @@ const ProfileScreen = () => {
                     </View>
                 </View>
             </View>
+            <SavedIGStore />
+            <TabNaviBar tabList={tabList} activeBar={activeTab} setActiveBar={setActiveTab} />
         </View>
     )
 }
