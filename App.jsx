@@ -3,7 +3,7 @@ import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import RootNavigator from './src/routes/RootNavigator';
 import { NavigationContainer } from '@react-navigation/native';
-import { color } from './src/constants/color';
+import { color, colors } from './src/constants/colors';
 
 const App = () => {
   return (
@@ -19,6 +19,6 @@ export default App;
 const styles = StyleSheet.create({
   flex: {
     flex: 1,
-    backgroundColor: color.WHITE
+    backgroundColor: colors.WHITE
   },
 });

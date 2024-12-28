@@ -9,5 +9,5 @@ export const routes = {
     AUTH_FLOW: "AuthFlow",
     MAIN_FLOW: "MainFlow",
     FEED_POSTS_SCREEN: "FeedPostsScreen",
-    PROFILE_SCREEN: 'ProfileScreen'
+    PROFILE_SCREEN: "ProfileScreen",
 }

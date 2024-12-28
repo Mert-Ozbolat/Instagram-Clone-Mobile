@@ -1,29 +1,34 @@
-import * as React from 'react';
-import Svg, { Defs, G, Circle, LinearGradient, Stop } from 'react-native-svg';
-
-export const StoryRing = props => (
+import * as React from "react";
+import Svg, { Circle, Defs, LinearGradient, Stop } from "react-native-svg";
+export const StoryRing = (props) => (
     <Svg
         width={90}
         height={90}
-        viewBox="0 0 64 64"
+        viewBox="0 0 90 90"
+        fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        {...props}>
+        {...props}
+    >
+        <Circle
+            cx={45}
+            cy={45}
+            r={43.75}
+            stroke="url(#paint0_linear_2558_1047)"
+            strokeWidth={2.5}
+        />
         <Defs>
-            <LinearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <Stop offset="0%" stopColor="#f09433" stopOpacity="1" />
-                <Stop offset="50%" stopColor="#e6683c" stopOpacity="1" />
-                <Stop offset="100%" stopColor="#dc2743" stopOpacity="1" />
+            <LinearGradient
+                id="paint0_linear_2558_1047"
+                x1={99.4737}
+                y1={9.47369}
+                x2={0.00000254104}
+                y2={69.8684}
+                gradientUnits="userSpaceOnUse"
+            >
+                <Stop stopColor="#C913B9" />
+                <Stop offset={0.500947} stopColor="#F9373F" />
+                <Stop offset={1} stopColor="#FECD00" />
             </LinearGradient>
         </Defs>
-        <G id="Page-1" stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
-            <Circle
-                id="Circle"
-                stroke="url(#gradient)"
-                strokeWidth={2}
-                cx={32}
-                cy={32}
-                r={31}
-            />
-        </G>
     </Svg>
 );

@@ -1,4 +1,4 @@
-import { source } from "../screens/CommonScreens/ProfileScreen";
+import { source } from "../screens/ProfileFlow/ProfileScreem";
 
 export const storyList = [
     {

@@ -1,23 +1,24 @@
-import { StyleSheet, Text, View, Image } from 'react-native'
-import React from 'react'
-import { StoryRing } from './StoryRing'
-import { StoryRing2 } from '../../assets/icons'
-
+import { Image, StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { StoryRing } from './StoryRing';
+import { StoryRing2 } from '../../assets/icons';
 
 const Avatar = ({ image, isSaved }) => {
-
-
     return (
         <View style={styles.avatar}>
-
             {isSaved ? <StoryRing2 /> : <StoryRing />}
 
-            <Image style={[styles.image, isSaved && styles.isSavedSize]} source={{ uri: image }} />
+            <Image
+                style={[styles.image, isSaved && styles.isSavedSize]}
+                source={{
+                    uri: image,
+                }}
+            />
         </View>
-    )
-}
+    );
+};
 
-export default Avatar
+export default Avatar;
 
 const styles = StyleSheet.create({
     avatar: {
@@ -27,11 +28,12 @@ const styles = StyleSheet.create({
     image: {
         width: 75,
         height: 75,
-        borderRadius: 999,
-        position: 'absolute'
+        borderRadius: 9999,
+
+        position: 'absolute',
     },
     isSavedSize: {
         width: 55,
-        height: 55
-    }
-})
+        height: 55,
+    },
+});

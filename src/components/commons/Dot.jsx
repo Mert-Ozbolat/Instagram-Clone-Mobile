@@ -1,25 +1,24 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { colors } from '../../constants/colors';
 
 const Dot = () => {
-    return (
-        <View style={styles.box} />
-    )
-}
+    return <View style={styles.box} />;
+};
 
-export default Dot
+export default Dot;
 
 const styles = StyleSheet.create({
     box: {
-        width: 12,
-        height: 12,
-        borderRadius: 999,
-        backgroundColor: 'red',
+        width: 13,
+        height: 13,
+        borderRadius: 99,
+        backgroundColor: colors.RED,
         borderWidth: 2,
-        borderColor: 'white',
+        borderColor: colors.WHITE,
         position: 'absolute',
         left: 18,
         top: 2,
-        zIndex: 1000
-    }
-})
+        zIndex: 1000,
+    },
+});

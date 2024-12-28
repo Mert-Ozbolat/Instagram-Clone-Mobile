@@ -1,6 +1,7 @@
 import * as React from "react";
 import Svg, { Path, Rect } from "react-native-svg";
-/* SVGR has dropped some elements not supported by react-native-svg: title */
+
+
 export const Play = (props) => (
     <Svg
         fill="#000000"
